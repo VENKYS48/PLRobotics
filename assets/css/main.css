@@ -81,6 +81,7 @@ h5,
 h6 {
   color: #000000;
   font-family: var(--heading-font);
+  text-align: center;
 }
 
 .fst-italic > li {
