@@ -7,6 +7,7 @@ body {
     overflow-x: hidden;
 }
 
+/* General Styles */
 .gradient {
     background: linear-gradient(to bottom, #f4eee6, #ffffff);
     z-index: -1;
@@ -14,14 +15,14 @@ body {
 
 /* Navbar Section */
 .navbar {
-    display: flex;  
+    display: flex;
     justify-content: space-evenly;
     background-color: transparent;
     padding: 0px 0px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0.5, 0.5);
 }
 
-/* LOGO-SECTION */
+/* Logo Section */
 .nav-logo {
     display: flex;
     color: #ff7d33;
@@ -33,6 +34,31 @@ body {
     width: 130px;
     position: relative;
 }
+
+/* Responsive Styles for Mobile */
+@media screen and (max-width: 576px) {
+    .navbar {
+        /* flex-direction: column;  */
+        align-items: center; /* Center align items */
+        padding: 10px;
+        box-shadow: none; /* Remove shadow for simplicity */
+    }
+
+    .nav-logo {
+        margin-top:50px;
+        font-size: 6rem; /* Smaller font for mobile */
+        margin-left: 50px; /* Center-align on smaller screens */
+        height: auto; /* Allow height to adjust dynamically */
+        width: auto; /* Allow width to adjust dynamically */
+        text-align: center; /* Center-align text */
+    }
+    .gradient {
+        width:1320px;
+        background: linear-gradient(to bottom, #f4eee6, #ffffff);
+        z-index: -1;
+    }
+}
+
 
 /* .logo {
     background-image: url("ASSETS/HOMEPAGE/LOGO.png");
@@ -52,6 +78,7 @@ body {
 
 /* Border for navigation tools */
 
+/* General Button Styles */
 .contact-btn {
     color: white; /* Text color */
     background-color: #ff7d33; /* Orange background */
@@ -78,6 +105,7 @@ body {
     color: white; 
 }
 
+/* Border Button Styles */
 .border1 {
     position: relative;
     display: inline-block;
@@ -88,24 +116,26 @@ body {
     border: none;
     background: transparent;
     cursor: pointer;
-  }
-  
-  .border1::after {
+}
+
+.border1::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
     height: 4px; /* Adjust thickness of the border */
     width: 0;
-    color:#ff7d33;
-    background-color:#ff7d33; /* Border color */
+    color: #ff7d33;
+    background-color: #ff7d33; /* Border color */
     transition: width 0.5s ease;
-  }
-  
-  .border1:hover::after {
+}
+
+.border1:hover::after {
     width: 100%; /* Full width for the hover state */
-  }
-  
+}
+
+/* Mobile-Specific Styles */
+
 
 
 /* MAIL SECTION */
@@ -145,32 +175,87 @@ body {
     background-color: gray;
     margin-left: 530px;
 }
+/* Mobile-Specific Styles */
+@media screen and (max-width: 576px) {
+    .mail {
+        flex-direction: column;
+        font-size: 1.5rem; /* Reduce font size */
+        text-align: left; 
+        /* margin-left: 800px; */
+    }
 
-.bottom-navbar {
-    justify-content: space-evenly;
-    position: relative;
-    top: 0;
-    width: auto;
-    height: auto; /* Adjust height as needed */
-    padding: 10px 20px;
-    color: white;
-    background: rgb(193, 191, 191); 
-    background-size: 100%;
-    background-position: center; /* Centers the image */
-    z-index: 1; /* Keeps it above other content */
+    .email {
+        /* flex-direction: column;  */
+        font-size: 1.2rem; /* Adjust font size */
+        align-items: center; /* Center-align items */
+        margin-top: 15px;
+    }
+
+    .fa-envelope {
+        margin-right: 10px;
+        flex-direction: column;
+        font-size: 1.5rem; /* Adjust icon size */
+        margin-bottom: 5px; /* Add space below the icon */
+    }
+
+    .mailid {
+        margin-left: 0; 
+        margin-right: 0;
+        font-size: 1rem; 
+        text-align: center; 
+    }
+
+    .vertical-line {
+        margin-top: 10px;
+        width: 4px;
+        height: 80px;
+        background-color: gray;
+        margin-left: 700px;
+    }
 }
-.bottom-navbar1 {
+
+/* General Styles for Desktop */
+.bottom-navbar, .bottom-navbar1 {
     justify-content: space-evenly;
     position: relative;
     top: 0;
     width: auto;
     height: auto; /* Adjust height as needed */
     padding: 10px 20px;
-    background: url('ASSETS/HOMEPAGE/bottom-navbar_bg.jpg') no-repeat center center;
     color: white;
-    background-size: 100%; 
+    background: rgb(193, 191, 191);
+    background-size: 100%;
     background-position: center;
     z-index: 1; /* Keeps it above other content */
+}
+
+.bottom-navbar1 {
+    background: url('ASSETS/HOMEPAGE/bottom-navbar_bg.jpg') no-repeat center center;
+    background-size: 100%;
+    background-position: center;
+}
+@media screen and (max-width: 576px) {
+    .bottom-navbar {
+        justify-content: space-evenly;
+        /* position: relative; */
+        /* top: 0; */
+        width: 1280px;
+        height: 80px; 
+        padding: 10px 20px;
+        color: white;
+        background: rgb(193, 191, 191);
+        background-size: 100%;
+        background-position: center;
+        z-index: 1; 
+    }
+    
+    .bottom-navbar1 {
+        width: 1270px;
+        background: url('ASSETS/HOMEPAGE/bottom-navbar_bg.jpg') no-repeat center center;
+        background-size: 100%;
+        background-position: center;
+    }
+    
 }
   
 
@@ -196,6 +281,32 @@ body {
     font-size: 1.6rem;
   }
 
+  .menu {
+    transition: all 0.3s ease-in-out;
+  }
+  /* Mobile Styles */
+@media (max-width: 576px) {
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .menu li {
+        padding: 0 15px;
+        position: relative;
+      }
+      
+      .menu a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.6rem;
+      }
+    }
  /* @keyframes appear {
     from {
         opacity: 0;
@@ -217,7 +328,7 @@ body {
   /* Dropdown Menu */
 .dropdown {
     /* margin-top: 28px; */
-    display: none; /* Arrange dropdown items in a row */
+    display: none; 
     position: absolute;
     top: 100%; 
     left: 0;
@@ -233,6 +344,7 @@ body {
     z-index: 10;
     list-style: none;
 }
+
 
 .menu > li:hover .dropdown {
     display: flex; /* Display dropdown on hover */
@@ -378,12 +490,27 @@ body {
   background: url('ASSETS/HOMEPAGE/cover_final.jpg') no-repeat center center/cover; 
   z-index: -1;
 }
+@media (max-width: 576px) {
+    .hero {
+        /* position: relative; */
+        width:1320px;
+        height: 600px; /* Set desired height */
+        overflow: hidden; /* Ensures the video doesn't spill outside */
+      }
+  
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('ASSETS/HOMEPAGE/cover_final.jpg') no-repeat center center/cover; 
+        z-index: -1;
+      }
+  }
   
 
-/* .hero .frosted-overlay {
-    position: relative;
-    width: 100%;
-} */
 
 
 /* Features Section */
@@ -611,6 +738,48 @@ body {
     color: black;
     background-color: darkgray;
 }
+/* Mobile Styles (max-width: 455px) */
+@media screen and (max-width: 576px) {
+    .footer {
+        flex: 1;
+        width:1320px;
+        margin-top: 100px;
+        background-color: lightgray;
+        padding: 0 0;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        justify-content: space-evenly;
+    }
+    .footer-container {
+        background-color: lightgray;
+        width: 1200px;
+    }
+
+    .footer-logo h1 {
+        font-size: 2.5rem; /* Further reduce logo size for smaller devices */
+    }
+
+    .footer-contact {
+        margin: 15px 0;
+        text-align: center; /* Ensure text is centered */
+    }
+
+    .links-column h4, .links-column ul li a {
+        font-size: 1rem; /* Smaller text for better readability */
+    }
+
+    .footer-social a {
+        width: 46px;
+        height: 46px;
+        font-size: 1.6rem; 
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem; /* Adjust text size for smaller screens */
+        height: 60px; 
+        width:1320px;
+    }
+}
 
 @keyframes popUp {
     0% {
@@ -693,7 +862,6 @@ body {
     color: #ff7d33;
     font-weight: 500;
   }
-
 
 .carousel-container {
     display: flex;
