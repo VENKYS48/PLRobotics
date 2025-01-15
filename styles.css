@@ -863,6 +863,16 @@ body {
     font-weight: 500;
   }
 
+@media screen and (max-width: 576px) {
+    .carousel-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+    height: 400px;
+    }
+}
+
 .carousel-container {
     display: flex;
     margin-right: 100px;
