@@ -467,7 +467,7 @@ body {
 .hero {
     position: relative;
     width: 100%;
-    height: 600px; /* Set desired height */
+    height: 650px; /* Set desired height */
     overflow: hidden; /* Ensures the video doesn't spill outside */
   }
 
@@ -505,7 +505,7 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('ASSETS/HOMEPAGE/cover_final.jpg') no-repeat center center/cover; 
+        background: url('ASSETS/HOMEPAGE/cover_img.jpg') no-repeat center center/cover; 
         z-index: -1;
       }
   }
